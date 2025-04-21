@@ -14,7 +14,7 @@
 {
     var isLoggedIn = true;
     var favLanguages = ['Spanish', 'Korean', 'Japanese', 'Portugese'];
-    function doubleNum(i) {
+    function doubleNumber(i) {
         return i * 2;
     }
     var book = {
@@ -39,7 +39,7 @@
 // lastName (string)
 // Returns a string with their uppercase initials
 {
-    function getNameInitials(firstName, lastName) {
+    function getInitials(firstName, lastName) {
         var f = (firstName[0]);
         var l = (lastName[0]);
         var upperFN = f.toUpperCase();
@@ -49,6 +49,37 @@
     }
     var firstName = "bruce";
     var lastName = "wayne";
-    getNameInitials(firstName, lastName);
+    console.log(getInitials(firstName, lastName));
 }
 // Exercise 3: Book Inventory
+// Create two variables:
+// bookTitle (string)
+// inventoryCount (number)
+// Then write a function called printInventory that returns a string like:
+// "The book 'The Office Scripts' has 5 copies left."
+{
+    var bookTitle = 'The Office Scripts';
+    var inventoryCount = 5;
+    function printInventory(bookTitle, inventoryCount) {
+        return "The book '".concat(bookTitle, "' has ").concat(inventoryCount, " copies left.");
+    }
+    console.log(printInventory(bookTitle, inventoryCount));
+}
+// Exercise 4: Languages Learned Tracker
+// Create a new array of objects called languagesLearned, where each object has:
+// name (string)
+// level (string — values can be 'beginner' | 'intermediate' | 'advanced')
+// inProgress (boolean)
+// Add at least three objects.
+{
+    var languagesLearned = [
+        { name: "English", level: "advanced", inProgress: false },
+        { name: "Spanish", level: "intermediate", inProgress: true },
+        { name: "Korean", level: "beginner", inProgress: true }
+    ];
+    console.log(languagesLearned);
+    for (var _i = 0, languagesLearned_1 = languagesLearned; _i < languagesLearned_1.length; _i++) {
+        var lang = languagesLearned_1[_i];
+        console.log(lang.name);
+    }
+}

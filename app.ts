@@ -36,12 +36,13 @@
 // loginCount – a number
 
 {
-    let userProfile: { 
-        username: string; 
-        age: number; 
-        hobbies: string[]; 
-        isAdmin: boolean; 
-        loginCount: number }
+    let userProfile: {
+        username: string;
+        age: number;
+        hobbies: string[];
+        isAdmin: boolean;
+        loginCount: number
+    }
 }
 
 // Exercise 2: Function -- Get Initials
@@ -57,13 +58,55 @@
         let upperFN = f.toUpperCase();
         let upperLN = l.toUpperCase();
         let initials: string = upperFN + upperLN;
-        
+
         return initials;
     }
 
     let firstName = "bruce";
     let lastName = "wayne"
-    getInitials(firstName, lastName);
+    console.log(getInitials(firstName, lastName));
 }
 
 // Exercise 3: Book Inventory
+// Create two variables:
+// bookTitle (string)
+// inventoryCount (number)
+// Then write a function called printInventory that returns a string like:
+// "The book 'The Office Scripts' has 5 copies left."
+{
+    let bookTitle: string = 'The Office Scripts';
+    let inventoryCount: number = 5;
+
+    function printInventory(bookTitle: string, inventoryCount: number): string {
+        return `The book '${bookTitle}' has ${inventoryCount} copies left.`
+    }
+
+    console.log(printInventory(bookTitle, inventoryCount));
+}
+
+// Exercise 4: Languages Learned Tracker
+// Create a new array of objects called languagesLearned, where each object has:
+// name (string)
+// level (string — values can be 'beginner' | 'intermediate' | 'advanced')
+// inProgress (boolean)
+// Add at least three objects.
+{
+    type Language = {
+        name: string,
+        level: string,
+        inProgress: boolean
+    };
+
+    let languagesLearned: Language[] = [
+        { name: "English", level: "advanced", inProgress: false },
+        { name: "Spanish", level: "intermediate", inProgress: true },
+        { name: "Korean", level: "beginner", inProgress: true }
+    ]
+
+    console.log(languagesLearned);
+
+    for (const lang of languagesLearned) {
+        console.log(lang.name);
+    }
+
+}
